@@ -1,16 +1,15 @@
-<!DOCTYPE html>
 {% extends 'rango/base.html' %}
-{%loadstaticfiles%}
+{%load staticfiles%}
 
-{%block title_block%}
+{% block title_block %}
     {% if category %}
             {{ category.name }}
         {% else %}
             Unknown Category
         {% endif %}
-    {% endblock %}
+{% endblock %}
 
-{%block body_block%}
+{% block body_block %}
     {% if category %}
     <h1>{{ category.name }}</h1>
         {% if pages %}
@@ -27,4 +26,4 @@
     {% else %}
     The specified category does not exist.
     {% endif %}
-{%endblock%}
+{% endblock %}
