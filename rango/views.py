@@ -21,7 +21,6 @@ def index(request):
     context_dict['pages'] = pages_list
 
     visitor_cookie_handler(request)
-
     response = render(request, 'rango/index.html', context=context_dict)
     return response
 
